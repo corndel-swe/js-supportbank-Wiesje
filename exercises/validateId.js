@@ -8,17 +8,24 @@ export function validateId(id) {
 
   // The id should be a string:
   if (typeof id !== 'string') {
-    // TODO: Add your code to throw an error here
+    throw new Error('ID should be a string')
   }
 
   // The id should be an odd number of characters long:
-  // TODO: throw an error on this condition
+  if (id.length % 2 === 0) {
+    throw new Error('ID should have an odd length')
+  }
 
   // The id should contain the letter 'a':
-  // TODO: throw an error on this condition
+  if (!id.includes('a')) {
+    throw new Error('ID should include letter a')
+  }
 
   // The id should be all lowercase:
-  // TODO: throw an error on this condition
+  if (id !== id.toLowerCase()) {
+    throw new Error('ID should be all lowercase')
+  }
+
 }
 
 // Exercise 2 Part 2
