@@ -4,13 +4,13 @@ import fs from 'fs/promises'
 
 describe('readHelloWorld()', () => {
     it('reads the file at the given URI and returns its contents as a string', async () => {
-        assert.equal(await fileIo.readHelloWorld(), 'Hello, world!\n')
+        assert.equal(await fileIo.readHelloWorld(), 'Hello, world!')
     })
 })
 
 describe('readDiaryEntry()', () => {
     it('reads the contents of the file and returns its contents as a string', async () => {
-        assert.equal(await fileIo.readDiaryEntry(), 'I wish I were a bird.\n')
+        assert.equal(await fileIo.readDiaryEntry(), 'I wish I were a bird.\r\n')
     })
 })
 
